@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Tintin Shop⭐⭐</title>
+  <style>
+    body {
+      background-color: white
+    }
+
+    tr {
+      background-color: #3DB2FF;
+    }
+
+    input[type=text],
+    select {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    input[type=submit] {
+      width: 50%;
+      background-color: black;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type=reset] {
+      width: 50%;
+      background-color: black;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type=date] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    input[type=email] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    input[type=Number] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    h2,
+    h3 {
+      font-size: 26px;
+      line-height: 20px;
+    }
+
+    input[type=submit]:hover {
+      background-color: #45a049;
+    }
+
+    input[type=reset]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+    function validate() {
+      var regName = /^[a-zA-Z]+$/;
+      var name = document.getElementById('fname').value;
+      if (!regName.test(name)) {
+        alert('Please enter valid first name.');
+        document.getElementById('fname').focus();
+        return false;
+      }
+
+      var regName = /^[a-zA-Z]+$/;
+      var lastname = document.getElementById('lname').value;
+      if (!regName.test(lastname)) {
+        alert('Please enter valid  last name.');
+        document.getElementById('lname').focus();
+        return false;
+      }
+      var regemail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+      var email_id = document.getElementById("email").value;
+      if (!regemail.test(email_id)) {
+        alert('Please enter valid  email!');
+        document.getElementById('email').focus();
+        return false;
+      }
+
+
+    const d = new Date();
+    yr = d.getFullYear();
+    month = d.getMonth() + 1;
+    day = d.getDate();
+    let fname = document.forms["myform"]["FirstName"].value;
+    let lname = document.forms["myform"]["LastName"].value;
+    let email = document.forms["myform"]["Email"].value;
+    let quantity = document.forms["myform"]["Quantity"].value;
+
+    var new_window = window.open("", "_self");
+        new_window.document.write("<h1>Order Confirmed</h1>");
+        new_window.document.write("<br><b>First Name</b>: " + fname);
+        new_window.document.write("<br><b>Last Name</b>: " + lname);
+        new_window.document.write("<br><b>Quantity</b>: " + quantity);
+        new_window.document.write("<br><b>Email</b>: " + email);
+        new_window.document.write("<br><b>Date of order</b>: " + d.toDateString());
+}
+  </script>
+  <h2 align="center">T-Shirt Booking Form</h2>
+  <form name="myform" onsubmit="return validate()">
+    <table align="center">
+      <h3 align="center">Your Details:</h3>
+      <tr>
+        <td> <strong>First Name:</strong></td>
+        <td><input type="text" id="fname" name="FirstName" placeholder="Enter Your Name" required />
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Last Name:</strong></td>
+        <td><input type="text" id="lname" name="LastName" placeholder="Enter Your Last  Name" required />
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Email Id:</strong></td>
+        <td><input type="email" id="email" name="Email" placeholder="Enter Your Email Id" required />
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Mobile Number:</strong></td>
+        <td>
+          <input type="text" name="MobileNumber" id="mnum" placeholder="9820xxxxxx" required />
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Shipping Address:</strong><br /><br /><br /></td>
+        <td><textarea name="Address:" id="uadd" rows="5" cols="30" placeholder="Please Enter your Address:" required></textarea></td>
+      </tr>
+      <tr>
+        <td><strong>City:</strong></td>
+        <td><input type="text" id="city" name="City" maxlength="50" placeholder="Please Enter your city:" required />
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Pin_Code:</strong></td>
+        <td><input type="Number" name="PinCode" id="pin" maxlength="6" placeholder="410206" required />
+      <tr>
+        <td><strong>Country:</strong></td>
+        <td><input type="text" id="ucountry" name="Country" placeholder="India" required /></td>
+      </tr>
+      <tr>
+        <td><strong>Size of the T-Shirt:</strong></td>
+        <td>
+          <select name="size" id="size_tshirt" required>
+            <option value="-1">Size:</option>
+            <option value="XS">XS</option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+            <option value="XXL">XXL</option>
+            <option value="XXXL">XXXL</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Color of the T-shirt:</strong></td>
+        <td>
+          <select name="Color" id="color_tshirt" required>
+            <option value="-1">Color:</option>
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="lavender">Lavender</option>
+            <option value="sky-blue">Sky-Blue</option>
+            <option value="purple">Purple</option>
+            <option value="Pink">Pink</option>
+            <option value="Maroon">Maroon</option>
+          </select>
+        </td>
+      </tr>
+
+      <tr>
+        <td><strong>Tagline:</strong></td>
+        <td>
+          <select name="Tagline" id="tagline_tshirt" required>
+            <option value="-1">Tagline:</option>
+            <option value="1">My Eyes Are Up Here</option>
+            <option value="2">I Do What The Voices In My Head Tell Me</option>
+            <option value="3">Free Hugs</option>
+            <option value="4">I’m In Shape, Round Is A Shape</option>
+            <option value="5">ALL I LOVE IS COFFEE!</option>
+            <option value="6">BUT FIRST COFFEE!</option>
+            <option value="7">LIVE AND LET LIVE!</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Quantity:</strong></td>
+        <td>
+          <select name="Quantity" id="Quantity_tshirt" required>
+            <option value="-1">Quantity:</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+          </select>
+        </td>
+      </tr>
+      <td><strong>Date of Delivery:</strong></td>
+      <td>
+        <input type="date" name="DOD" placeholder="Enter the preferred date:" required />
+      </td>
+      <tr>
+
+      </tr>
+      <tr>
+        <td colspan="2" align="center">
+          <input type="submit" value="Submit">
+          <input type="reset" value="Reset">
+        </td>
+      </tr>
+    </table>
+  </form>
+</body>
+
+</html>
